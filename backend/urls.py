@@ -21,6 +21,7 @@ from myBack.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/publication/', PublicationView.as_view()),
+    path('api/employeur', EmployeurView.as_view()),
     path('api/type/', TypeView.as_view()),
     path('api/hr/', HRView.as_view()),
     path('api/publi_type/', PubliTypeView.as_view()),

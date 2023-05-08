@@ -16,7 +16,7 @@ class Type(models.Model):
 class Publication(models.Model):
     id = models.IntegerField(primary_key=True, auto_created=True)
     titre = models.CharField(max_length=100)
-    entrepriseName = models.CharField(max_length=20)
+    entrepriseName = models.CharField(max_length=100)
     mail = models.CharField(max_length=50)
     emplacement = models.CharField(max_length=20)
     description = models.TextField()
@@ -30,6 +30,16 @@ class Publication(models.Model):
     def __str__(self):
         return self.titre
     
+
+class Employeur(models.Model):
+    id = models.IntegerField(primary_key=True, auto_created=True)
+    entrepriseName = models.CharField(max_length=100)
+    numbreEmployee = models.CharField(max_length=20)
+    name = models.CharField(max_length=100)
+    isManager = models.BooleanField(default=False)
+    howDiscover = models.CharField(max_length=50)
+    telNumber = models.CharField(max_length=20)
+
 class Publi_Type(models.Model):
     id = models.IntegerField(primary_key=True, auto_created=True)
     id_publi = models.ForeignKey(Publication, on_delete=models.CASCADE)

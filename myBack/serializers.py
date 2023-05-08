@@ -16,6 +16,11 @@ class PublicationSerializer(serializers.ModelSerializer):
         model = Publication
         fields = '__all__'
 
+class EmployeurSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Employeur
+        fields = '__all__'        
+
 class IdPubliSerializer(serializers.ModelSerializer):
     class Meta:
         model = Publication

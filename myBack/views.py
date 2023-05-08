@@ -6,6 +6,9 @@ class PublicationView(generics.ListAPIView):
     queryset = Publication.objects.all()
     serializer_class = PublicationSerializer
 
+class EmployeurView(generics.ListAPIView):
+    queryset = Employeur.objects.all()
+    serializer_class = EmployeurSerializer
 
 class TypeView(generics.ListAPIView):
     queryset = Type.objects.all()
